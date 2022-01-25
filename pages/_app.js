@@ -5,6 +5,9 @@ import Sidebar from '../../forum/components/Sidebar'
 import '../components/Sidebar.css'
 
 function MyApp({ Component, pageProps }) {
+  if(Component.getLayout){
+    return Component.getLayout(<Component {...pageProps} />)
+  }
   return (
     <Sidebar >
   <Component {...pageProps} />

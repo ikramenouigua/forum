@@ -91,8 +91,12 @@ const Home = ({ articles }) => {
       {articles.map(article =>{
         return<div>
            <div class=" overflow-hidden shadow-lg mt-4 rounded-2xl bg-white pb-3" >
+           <div class="px-6 py-4  ">
+            <span className="bg-teal-400 text-white rounded-lg pr-2 pl-2 float-right"> {article.category}</span>
+          </div>
           <div class="px-6 py-4  ">
             <div class="flex float-left">
+              
               <button class="float-left ml-auto border rounded-full ml-2 w-8 h-8 text-center leading-none text-gray-200 bg-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
                 <i class="fas fa-user fill-current"></i>
               </button>
@@ -103,7 +107,7 @@ const Home = ({ articles }) => {
           </div>
 
           <div class="p-6   text-left font-serif font-bold">
-            Lorem Ipsum is simply dummy text
+           
           </div>
 
           <div class="p-6   text-right">

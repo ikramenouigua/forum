@@ -51,9 +51,9 @@ export default function Sidebar({children}) {
      <button onClick={()=> router.push('/Register')}> <span class="mr-2  drop-shadow-lg text-teal-400 border-teal-400 border-2 rounded-2xl pr-2 pl-2">
        Register
       </span></button>
-      <span class="mr-2 bg-teal-400 text-white rounded-2xl pr-2 pl-2">
+      <button onClick={()=> router.push('/login')}> <span class="mr-2 bg-teal-400 text-white rounded-2xl pr-2 pl-2">
        log in
-      </span>
+      </span></button>
       <button
         class="ml-auto border rounded-full ml-2 w-10 h-10 text-center leading-none text-gray-200 bg-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
         <i class="fas fa-user fill-current"></i>
@@ -61,11 +61,7 @@ export default function Sidebar({children}) {
     </nav>
    
     {children}
-    <footer class="px-6 py-3 border-t flex w-full items-end">
-      <p class="text-gray-600">Made by @codingsafari</p>
-      <div class="flex-1"></div>
-    
-    </footer>
+   
   </main>
 </section>
 

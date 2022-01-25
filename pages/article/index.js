@@ -1,10 +1,13 @@
 import {useState} from 'react';
-const Index = ({ articles }) => {
+import { useRouter } from 'next/router';
+const Index = ({ articles }) =>{
+    const router= useRouter()
     const [posts,setPosts] = useState(articles)
-    const searchcategory = async (category) =>{
+    const searchcategory = async () =>{
         console.log("khadama a sata")
-        const res = await fetch(`http://localhost:3000/article?category=${category}`)
-        const data =await res.json()
+        const res = await fetch(`http://localhost:3000/article?category=data`)
+        const {data} =await res.json()
+        console.log(data)
         setPosts(data)
         console.log(event)
 
@@ -32,6 +35,8 @@ const Index = ({ articles }) => {
         <div className="grid grid-cols-3 gap-6 mr-10 ml-10 grid-rows-3 mt-20 ">
         {posts.map(article =>{
           return<div>
+             
+              <a onClick={()=> router.push(`/article/${article._id}`)}>
              <div class=" overflow-hidden shadow-lg mt-4 rounded-2xl bg-white pb-3" >
              <div class="px-6 py-4  ">
             <span className="bg-teal-400 text-white rounded-lg pr-2 pl-2 float-right"> {article.category}</span>
@@ -58,6 +63,7 @@ const Index = ({ articles }) => {
               <span className="float-left ml-3"> {article.description}</span>
             </div>
           </div>
+          </a>
           </div>
         })}
        
