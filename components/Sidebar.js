@@ -8,33 +8,33 @@ export default function Sidebar({children}) {
     <div>
       <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
       <section class="h-screen w-screen bg-gray-200 flex flex-col-reverse sm:flex-row min-h-0 min-w-0 overflow-hidden">
-  <aside class="sm:h-full sm:w-16 w-full h-12 bg-gray-800 text-gray-200">
-    <ul class="text-center flex flex-row sm:flex-col w-full">
+  <aside className="sm:h-full sm:w-16 w-full h-12 bg-gray-800 text-gray-200">
+    <ul className="text-center flex flex-row sm:flex-col w-full">
       
-      <li class="h-14 border-b border-gray-900 hidden sm:block">
-        <a id="page-icon" class="h-full w-full hover:bg-gray-700 block p-3">
-          <img class="object-contain h-full w-full" src="https://avatars1.githubusercontent.com/u/6157842?v=4"
+      <li className="h-14 border-b border-gray-900 hidden sm:block">
+        <a id="page-icon" className="h-full w-full hover:bg-gray-700 block p-3">
+          <img className="object-contain h-full w-full" src="https://avatars1.githubusercontent.com/u/6157842?v=4"
             alt="open-source" />
         </a>
       </li>
       
-      <li class="sm:border-b border-gray-900 flex-1 sm:w-full" title="Home">
-        <a id="page-icon" onClick={() => router.push('/')}  class="h-full w-full hover:bg-gray-700 block p-3">
-          <i class="fas fa-home fill-current text-white"> </i>
+      <li className="sm:border-b border-gray-900 flex-1 sm:w-full" title="Home">
+        <a id="page-icon" onClick={() => router.push('/')}  className="h-full w-full hover:bg-gray-700 block p-3">
+          <i className="fas fa-home fill-current text-white"> </i>
         </a>
       </li>
-      <li class="sm:border-b border-gray-900 flex-1 sm:w-full" title="Articles">
-        <a id="page-icon" onClick={() => router.push('/article')}  class="h-full w-full hover:bg-gray-700 block p-3">
+      <li className="sm:border-b border-gray-900 flex-1 sm:w-full" title="Articles">
+        <a id="page-icon" onClick={() => router.push('/article')}  className="h-full w-full hover:bg-gray-700 block p-3">
           <i class="fas fa-book-open fill-current text-white"> </i>
         </a>
       </li>
-      <li class="sm:border-b border-gray-900 flex-1 sm:w-full" title="Add new article">
-        <a id="page-icon" onClick={() => router.push('/article/add')}  class="h-full  w-full hover:bg-gray-700 block p-3">
+      <li className="sm:border-b border-gray-900 flex-1 sm:w-full" title="Add new article">
+        <a id="page-icon" onClick={() => router.push('/article/add')}  className="h-full  w-full hover:bg-gray-700 block p-3">
           <i class="fas fa-folder-plus fill-current text-white"> </i>
         </a>
       </li>
-      <li class="sm:border-b border-gray-900 flex-1 sm:w-full" title="profile">
-        <a id="page-icon" onClick={() => router.push('/Profile')}  class="h-full  w-full hover:bg-gray-700 block p-3">
+      <li className="sm:border-b border-gray-900 flex-1 sm:w-full" title="profile">
+        <a id="page-icon" onClick={() => router.push('/Profile')}  className="h-full  w-full hover:bg-gray-700 block p-3">
           <i className="fas fa-user-alt text-white"> </i>
         </a>
       </li>
