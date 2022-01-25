@@ -3,6 +3,7 @@ import GitHub from 'next-auth/providers/github'
 import GoogleProvider from 'next-auth/providers/google'
 
 const options = {
+ 
     providers: [
         GitHub({
           clientId: process.env.GITHUB_ID,
@@ -12,11 +13,10 @@ const options = {
           clientId: process.env.GOOGLE_CLIENT_ID,
           clientSecret: process.env.GOOGLE_CLIENT_SECRET
         })
+       
       ],
       database: process.env.DB_URL,
-      session: {
-        jwt :true,
-      },
+      
       jwt :{
         secret: 'gdudkmdkflmfm',
       },

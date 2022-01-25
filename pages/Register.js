@@ -58,11 +58,17 @@ function Register(){
       </div>
 							<button type="submit" class="block w-full bg-indigo-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2">Login</button>
 							<span class="text-sm ml-2 hover:text-blue-500 cursor-pointer">Forgot Password ?</span>
-                            <button class="block w-full bg-blue-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2"><i class="fa fa-facebook mr-2"></i>Facebook</button> <button class="block w-full  mt-4 py-2 rounded-2xl text-white font-semibold mb-2 bg-red-800 "><i class="fa fa-google mr-2"></i>Google</button>
+                            <button class="block w-full bg-blue-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2"><i class="fa fa-facebook mr-2"></i>Facebook</button> 
                            
              
                  <Link href='http://localhost:3000/api/auth/signin'>
-                          <button class="block w-full bg-blue-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2"  onClick={() => signIn('github') }>Register with github</button></Link>
+                          <button class="block w-full bg-blue-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2"  onClick={e => {  e.preventDefault()
+                 
+                  signIn('GITHUB')}}>Register with github</button></Link>
+                   <Link href='http://localhost:3000/api/auth/signin'>
+                          <button class="block w-full bg-blue-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2"  onClick={e => {  e.preventDefault()
+                 
+                  signIn('google')}}>Register with google</button></Link>
 		</form>
 	</div>
 </div>
