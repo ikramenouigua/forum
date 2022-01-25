@@ -9,9 +9,9 @@ function MyApp({ Component, pageProps }) {
     return Component.getLayout(<Component {...pageProps} />)
   }
   return (
-  
+    <Sidebar >
   <Component {...pageProps} />
-  )
+  </ Sidebar>)
 }
 
 export default MyApp

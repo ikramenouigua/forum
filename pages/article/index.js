@@ -37,14 +37,14 @@ const Index = ({ articles }) =>{
           return<div>
              
               <a onClick={()=> router.push(`/article/${article._id}`)}>
-             <div class=" overflow-hidden shadow-lg mt-4 rounded-2xl bg-white pb-3" >
-             <div class="px-6 py-4  ">
+             <div className=" overflow-hidden shadow-lg mt-4 rounded-2xl bg-white pb-3" >
+             <div className="px-6 py-4  ">
             <span className="bg-teal-400 text-white rounded-lg pr-2 pl-2 float-right"> {article.category}</span>
           </div>
-            <div class="px-6 py-4  ">
-              <div class="flex float-left">
-                <button class="float-left ml-auto border rounded-full ml-2 w-8 h-8 text-center leading-none text-gray-200 bg-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
-                  <i class="fas fa-user fill-current"></i>
+            <div className="px-6 py-4  ">
+              <div className="flex float-left">
+                <button className="float-left ml-auto border rounded-full ml-2 w-8 h-8 text-center leading-none text-gray-200 bg-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                  <i className="fas fa-user fill-current"></i>
                 </button>
                 <div>
                   <strong className="ml-2">Andrew Alfred</strong>
@@ -52,14 +52,14 @@ const Index = ({ articles }) =>{
               </div>
             </div>
   
-            <div class="p-6   text-left font-serif font-bold">
+            <div className="p-6   text-left font-serif font-bold">
              
             </div>
   
-            <div class="p-6   text-right">
+            <div className="p-6   text-right">
               <span className="float-left ml-3 font-bold text-2xl font-serif"> {article.title}</span>
             </div>
-            <div class="p-6   text-right">
+            <div className="p-6   text-right">
               <span className="float-left ml-3"> {article.description}</span>
             </div>
           </div>
