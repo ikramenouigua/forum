@@ -6,12 +6,12 @@ function Article({article}){
       <img className="w-12 h-12 rounded-full object-cover mr-4 shadow" src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="avatar"/>
       <div className="">
          <div className="flex items-center justify-between">
-            <h2 className="text-lg font-semibold text-gray-900 -mt-1">Brad Adams </h2>
-            <small className="text-sm text-gray-700">22h ago</small>
+            <h3 >Brad Adams </h3>
+           <h1 className="text-lg font-bold text-gray-900 -mt-1">{article.title}</h1>
          </div>
-         <p className="text-gray-700">Joined 12 SEP 2012. </p>
+         <p className="text-gray-700">{article.description} </p>
          <p className="mt-3 text-gray-700 text-sm">
-        
+         
          </p>
          <div className="mt-4 flex items-center">
             <div className="flex mr-2 text-gray-700 text-sm mr-3">

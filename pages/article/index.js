@@ -5,7 +5,7 @@ const Index = ({ articles }) =>{
     const [posts,setPosts] = useState(articles)
     const searchcategory = async () =>{
         console.log("khadama a sata")
-        const res = await fetch(`http://localhost:3000/article?category=data`)
+        const res = await fetch('http://localhost:3000/api/article/data')
         const {data} =await res.json()
         console.log(data)
         setPosts(data)
@@ -17,18 +17,18 @@ const Index = ({ articles }) =>{
       <section class=" pt-3 md:p-6 lg:mb-0 lg:min-h-0 lg:min-w-0">
   
         <div className="mt-11 mb-11">
-          <p className=" font-bold"> <i class="fas fa-th-list fill-current text-teal-400 mr-3 "> </i>Categories</p>
+          <p className=" font-bold"> <i className="fas fa-th-list fill-current text-teal-400 mr-3 "> </i>Categories</p>
         </div>
   
         <div class="grid grid-cols-7 gap-9 mr-12 ml-12">
-         <button> <div className="border border-black rounded-lg text-center h-18 text-sm pt-3 ">Design <div class="flex justify-center items-center "> <i class="fas fa-pencil-ruler text-yellow-300 block "></i></div></div></button>
-          <div className="border border-black rounded-lg text-center h-18 text-sm ">Web developpement <div class="flex justify-center items-center "> <i class="fas fa-code text-rose-500 block "></i></div></div>
+         <button> <div className="border border-black rounded-lg text-center h-18 text-sm pt-3 ">Design <div className="flex justify-center items-center "> <i className="fas fa-pencil-ruler text-yellow-300 block "></i></div></div></button>
+          <div className="border border-black rounded-lg text-center h-18 text-sm ">Web developpement <div className="flex justify-center items-center "> <i className="fas fa-code text-rose-500 block "></i></div></div>
   
-          <div className="border border-black rounded-lg text-center h-18 text-sm ">Mobile developpement <div class="flex justify-center items-center "> <i class="fas fa-mobile-alt text-orange-500 block "></i></div></div>
-          <div className="border border-black rounded-lg text-center h-18 text-sm pt-3">Cloud <div class="flex justify-center items-center "> <i class="fas fa-cloud-upload-alt text-blue-400 block "></i></div></div>
-        <button onClick={()=>searchcategory('data')}>  <div className="border border-black rounded-lg text-center h-18 text-sm pt-3">Data <div class="flex justify-center items-center "> <i class="fas fa-database text-purple-500 block "></i></div></div></button>
-          <div className="border border-black rounded-lg text-center h-18 text-sm pt-3">Security <div class="flex justify-center items-center "> <i class="fas fa-shield-alt text-red-600 block "></i></div></div>
-          <div className="border border-black rounded-lg text-center h-18 text-sm pt-3 ">Devops <div class="flex justify-center items-center "> <i class="fab fa-dev text-green-500 block "></i></div></div>
+          <div className="border border-black rounded-lg text-center h-18 text-sm ">Mobile developpement <div className="flex justify-center items-center "> <i className="fas fa-mobile-alt text-orange-500 block "></i></div></div>
+          <div className="border border-black rounded-lg text-center h-18 text-sm pt-3">Cloud <div className="flex justify-center items-center "> <i className="fas fa-cloud-upload-alt text-blue-400 block "></i></div></div>
+        <button onClick={()=>searchcategory('data')}>  <div className="border border-black rounded-lg text-center h-18 text-sm pt-3">Data <div className="flex justify-center items-center "> <i className="fas fa-database text-purple-500 block "></i></div></div></button>
+          <div className="border border-black rounded-lg text-center h-18 text-sm pt-3">Security <div className="flex justify-center items-center "> <i className="fas fa-shield-alt text-red-600 block "></i></div></div>
+          <div className="border border-black rounded-lg text-center h-18 text-sm pt-3 ">Devops <div className="flex justify-center items-center "> <i className="fab fa-dev text-green-500 block "></i></div></div>
         </div>
   
   

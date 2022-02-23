@@ -8,6 +8,7 @@ export default async (req, res) => {
 
     switch (method) {
         case 'GET':
+            
             try {
                 const articles = await Article.find({});
 

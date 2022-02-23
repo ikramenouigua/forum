@@ -5,28 +5,26 @@ dbConnect();
 
 export default async (req, res) => {
     const {
-        query: { articleId },
+        query: { id },
         method
     } = req;
-    console.log(req)
+
     switch (method) {
         case 'GET':
-            console.log(articleId)
             try {
-                const article = await Article.findById(articleId);
-                
+                const note = await Article.findById(id);
 
                 if (!note) {
                     return res.status(400).json({ success: false });
                 }
 
-                res.status(200).json({ success: true, data: article });
+                res.status(200).json({ success: true, data: note });
             } catch (error) {
                 res.status(400).json({ success: false });
             }
             break;
        
-       
+        
         default:
             res.status(400).json({ success: false })
             break;
